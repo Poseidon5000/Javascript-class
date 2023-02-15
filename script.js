@@ -158,15 +158,73 @@ const dateOfBirth = [1976, 1996, 1960, 1945, 1999, 2005, 1987, 1951, 2000];
 // console.log(dateOfBirth[2]);
 // console.log(dateOfBirth[3]);
 
-let ages = []
+// let ages = []
 
-let currentYear = 2023
+// let currentYear = 2023
 
-for (let a = 0; a < dateOfBirth.length; a++){
-   let age= currentYear- dateOfBirth[a];
-    // console.log(age);   
+// for (let a = 0; a < dateOfBirth.length; a++){
+//    let age= currentYear- dateOfBirth[a];
+//     // console.log(age);   
     
-    ages.push(age)
-} 
+//     ages.push(age)
+// } 
 
-console.log(ages);
+// console.log(ages);
+
+
+//LOOPING BACKWARDS
+
+// const salary = [50, 75, 100, 700, 350,875, 1000]
+
+// for(i = salary.length-1; i >= 0; i--){
+//     console.log(salary[i]);
+// }
+
+
+//WHILE LOOPS
+
+// let rep = 1;
+
+// while(rep<=10){
+//     console.log(`you have lifted ${rep} rep`);
+
+//     rep++
+// }
+
+// let dice = Math.trunc( Math.random()*6) + 1;
+
+// console.log(dice);
+
+// while(dice !== 6){
+//     console.log(`you have rolled a ${dice}. TRY AGAIN!!!!!`);
+//      dice = Math.trunc( Math.random()*6 + 1 );
+
+//      if(dice == 6){
+//         console.log(`YAY!!!!!, you rolled a ${dice} and have won😁😁`);
+//      }
+// }
+// ;
+
+//FUNCTIONS
+
+// function logger(){
+//     console.log("hello world");
+// }
+
+
+// logger()
+
+// logger()
+// logger()
+// logger()
+// logger()
+// logger()
+// logger()
+
+function fruitJuice(){
+    console.log("orange", "mango");
+
+}
+
+
+fruitJuice()
