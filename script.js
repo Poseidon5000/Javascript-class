@@ -205,26 +205,59 @@ const dateOfBirth = [1976, 1996, 1960, 1945, 1999, 2005, 1987, 1951, 2000];
 // }
 // ;
 
-//FUNCTIONS
+// FUNCTIONS
+
+//FUNCTION DECLARATIONS
 
 // function logger(){
 //     console.log("hello world");
 // }
 
 
-// logger()
 
-// logger()
-// logger()
-// logger()
-// logger()
-// logger()
-// logger()
+// function fruitJuice(toro, ndy, johnson){
+//     // console.log("orange", "mango");
 
-function fruitJuice(){
-    console.log("orange", "mango");
+//     const juice = `I have used ${toro} oranges, ${johnson} apples and ${ndy} mangoes for this juice`;
 
+//     return juice
+
+// }
+
+
+// fruitJuice(5, 2)
+
+// console.log(fruitJuice(7, 4, 12));
+// console.log(fruitJuice(10, 14,5));
+// console.log(fruitJuice(1, 2, 3));
+
+
+//FUCTION EXPRESSION
+
+// const age = 15
+
+// const fruitJuiceProcessor = function(orange, apples, banana){
+//  const juice = `I have used ${orange} oranges, ${apples} apples and ${banana} bananas for this juice`;
+//      return juice
+//     }
+    
+//     fruitJuiceProcessor(5, 2)
+    
+//     console.log(fruitJuiceProcessor(7, 4, 12));
+//     console.log(fruitJuiceProcessor(10, 14,5));
+//     console.log(fruitJuiceProcessor(1, 2, 3));
+
+//CLASSWORK
+
+const theCurrentYear = 2023;
+
+const ageCalculator = function(age){
+    const calculateAge = theCurrentYear - age
+
+    const yourBirthYear = `you were born in ${calculateAge}`
+
+    return yourBirthYear
 }
 
 
-fruitJuice()
+console.log(ageCalculator(64));
