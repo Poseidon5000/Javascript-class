@@ -283,14 +283,34 @@ const dateOfBirth = [1976, 1996, 1960, 1945, 1999, 2005, 1987, 1951, 2000];
 
 //CLASSWORK USING ARROW FUNCTIONS
 
-const ourCurrentYear = 2023
+// const ourCurrentYear = 2023
 
-const yourAgeCalculator = (age) =>{
-     const calculateAge = ourCurrentYear - age
+// const yourAgeCalculator = (age) =>{
+//      const calculateAge = ourCurrentYear - age
 
-   const yourBirthYear = `you were born in ${calculateAge}`
+//    const yourBirthYear = `you were born in ${calculateAge}`
 
-  return yourBirthYear
+//   return yourBirthYear
+// }
+
+// console.log(yourAgeCalculator(50));
+
+//FUNCTIONS CALLING FUNCTIONS
+const cutFruits = function(fruit){
+    return fruit * 4
 }
 
-console.log(yourAgeCalculator(50));
+
+function fruitJuice(orange, banana){
+let orangepieces = cutFruits(orange);
+let bananapieces = cutFruits(banana)
+
+
+
+const juice = `I have used ${orangepieces} oranges and ${bananapieces} bananas for this juice`;
+return juice
+
+}
+
+
+console.log(fruitJuice(4, 2));
