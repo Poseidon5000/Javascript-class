@@ -231,8 +231,14 @@ const dateOfBirth = [1976, 1996, 1960, 1945, 1999, 2005, 1987, 1951, 2000];
 // console.log(fruitJuice(10, 14,5));
 // console.log(fruitJuice(1, 2, 3));
 
+// function birthYear(age){
+//     return 2023-age
+// }
 
-//FUCTION EXPRESSION
+// console.log(birthYear(23));
+
+
+//FUCTION EXPRESSION(ANONYMOUS FUNCTIONS)
 
 // const age = 15
 
@@ -247,17 +253,44 @@ const dateOfBirth = [1976, 1996, 1960, 1945, 1999, 2005, 1987, 1951, 2000];
 //     console.log(fruitJuiceProcessor(10, 14,5));
 //     console.log(fruitJuiceProcessor(1, 2, 3));
 
+// const yearOfBirth = function(age){
+//     return 2023-age
+// }
+
+// console.log(yearOfBirth(25));
+
 //CLASSWORK
 
-const theCurrentYear = 2023;
+// const theCurrentYear = 2023;
 
-const ageCalculator = function(age){
-    const calculateAge = theCurrentYear - age
+// const ageCalculator = function(age){
+//     const calculateAge = theCurrentYear - age
 
-    const yourBirthYear = `you were born in ${calculateAge}`
+//     const yourBirthYear = `you were born in ${calculateAge}`
 
-    return yourBirthYear
+//     return yourBirthYear
+// }
+
+
+// console.log(ageCalculator(64));
+
+//ARROW FUNCTIONS
+
+// const youWereBorn = (age) => 2023-age;
+
+// console.log(youWereBorn(45));
+
+
+//CLASSWORK USING ARROW FUNCTIONS
+
+const ourCurrentYear = 2023
+
+const yourAgeCalculator = (age) =>{
+     const calculateAge = ourCurrentYear - age
+
+   const yourBirthYear = `you were born in ${calculateAge}`
+
+  return yourBirthYear
 }
 
-
-console.log(ageCalculator(64));
+console.log(yourAgeCalculator(50));
