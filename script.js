@@ -296,21 +296,35 @@ const dateOfBirth = [1976, 1996, 1960, 1945, 1999, 2005, 1987, 1951, 2000];
 // console.log(yourAgeCalculator(50));
 
 //FUNCTIONS CALLING FUNCTIONS
-const cutFruits = function(fruit){
-    return fruit * 4
-}
+// const cutFruits = function(fruit){
+//     return fruit * 4
+// }
 
 
-function fruitJuice(orange, banana){
-let orangepieces = cutFruits(orange);
-let bananapieces = cutFruits(banana)
+// function fruitJuice(orange, banana){
+// let orangepieces = cutFruits(orange);
+// let bananapieces = cutFruits(banana)
 
 
 
-const juice = `I have used ${orangepieces} oranges and ${bananapieces} bananas for this juice`;
-return juice
+// const juice = `I have used ${orangepieces} oranges and ${bananapieces} bananas for this juice`;
+// return juice
 
-}
+// }
 
 
-console.log(fruitJuice(4, 2));
+// console.log(fruitJuice(4, 2));
+
+// const speedFormular = 1000/360;
+
+// const speedConverter = (firstName, speed) =>{
+//     const yourSpeed = speed * speedFormular;
+
+//     const yourNewSpeed = `${firstName} is travelling at a speed of ${yourSpeed} m/s`;
+
+//     return yourNewSpeed
+// }
+
+// console.log(speedConverter("Ndy", 100));
+// console.log(speedConverter("Johnson", 70));
+// console.log(speedConverter("Poseidon", 200));
