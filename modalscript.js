@@ -1,4 +1,4 @@
-
+// Calling out tags from HTML
 let btnOpenModal = document.querySelectorAll('.show-modal')
 
 let modalCloser = document.querySelector('.close-modal');
@@ -9,7 +9,7 @@ let overlay = document.querySelector('.overlay');
 
 let body = document.querySelector("body")
 
-
+//Adding Event listeners
 
 for(i=0; i <= btnOpenModal.length-1; i++){
     

@@ -1,0 +1,43 @@
+.box{
+    height: 30vh;
+    width: 19%;
+    border: 2px solid black;
+    margin-top: 2rem;
+    font-size: 50px;
+    text-align: center;
+    
+}
+ 
+.body{
+    background-color: white;
+}
+.button{
+    padding: 1rem ;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.input{
+    padding: 1rem;
+}
+
+.remove{
+    display: none;
+}
+
+.first{
+    padding: 1rem ;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    margin-top: 1rem; 
+}
+
+.second{ 
+ padding: 1rem ;
+    background-color: black;
+    color: white;
+    border: 1px solid white; 
+    margin-top: 1rem;
+}
