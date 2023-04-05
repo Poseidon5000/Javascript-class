@@ -1,5 +1,7 @@
 //Introduction
 
+
+
 // alert("hello world");
 
 // console.log("hello universe");
@@ -268,6 +270,9 @@
 //(adding elements)
 // myFavFruits.splice(2,0, "mango")
 // console.log(myFavFruits);
+// let name = "Poseidon"
+
+// console.log(`${name} is the greatest`);
 
 // myFavFruits.splice(0, 0, "strawberry")
 // console.log(myFavFruits);
@@ -282,12 +287,129 @@
 
 //OBJECT
 
-const benStudentData = {
-    firstName: "gabriel",
-    lastName: "imoh",
-    age: 91,
-    short:true,
-}
+// const benStudentData = {
+//     firstName: "gabriel",
+//     lastName: "imoh",
+//     age: 91,
+//     short:true,
+// }
 
 // console.log(benStudentData.firstName);
-console.log(benStudentData.lastName);
+// console.log(benStudentData.lastName);
+
+//LOOPS(for, while)
+
+
+
+// for(let i = 1; i<= 20; i++){
+//     // console.log(`you have lifted ${i} reps 🏋️‍♂️🏋️‍♂️`);
+//     console.log(i);
+// }
+//template literal
+//Using for loops to loop through an array
+
+
+// console.log(dateOfBirth[0]);
+// console.log(dateOfBirth[1]);
+// console.log(dateOfBirth[2]);
+
+// const dateOfBirth = [1978, 1990, 1992, 1988, 2001, 1993, 1985, 2003, 1973, 1994, 2003, 2005, 1983, 1960]
+
+// for(i = 0; i<dateOfBirth.length; i++){
+//     console.log(dateOfBirth[i]);
+// }
+
+//looping backwards
+// for(i=dateOfBirth.length-1; i>=0; i--){
+//     console.log(dateOfBirth[i]);
+// }
+
+
+
+//while loop
+
+// for(let i = 1; i<= 20; i++){
+//     // console.log(`you have lifted ${i} reps 🏋️‍♂️🏋️‍♂️`);
+//     console.log(i);
+// }
+
+// let rep = 1;
+
+// while(rep<=10){
+//  console.log(`you have lifted ${rep} reps 🏋️‍♂️🏋️‍♂️`);
+ 
+//  rep++
+// }
+
+// let dice = Math.floor(Math.random() *6) +1
+
+// while(dice !== 6 && dice !== 3){
+//     console.log(`you rolled a ${dice} so you lose`);
+//     dice = Math.floor(Math.random() *6) +1
+
+//     if(dice == 6){
+//         console.log(`yes you rolled a ${dice} and have won`);
+//     }
+//     if(dice == 3){
+//         console.log(`yes you rolled a ${dice} and have won`);
+//     }
+
+// }
+
+//FUNCTIONS
+
+//Function declaraction
+
+// function logger(){
+//     console.log("Hello world");
+//     console.log(8-3);
+    
+// } 
+
+// logger()
+
+// function juiceMaker(orange, apple){
+//      console.log(orange, apple);
+//     // const juice = `I made this juice using ${orange} oranges and ${apple} apples`
+//     // return juice;
+// }
+
+// juiceMaker(5, 2)
+// console.log(juice);
+// console.log(juiceMaker(10, 12));
+
+
+function agecalculator(currentYear, dateOfBirth){
+    const yourAge = `You are ${currentYear - dateOfBirth} years old`
+    return yourAge
+}
+
+// console.log(
+//     agecalculator(2023, 2000)
+// );
+
+//function expression
+// function juiceMaker(orange, apple){
+//      console.log(orange, apple);
+//     // const juice = `I made this juice using ${orange} oranges and ${apple} apples`
+//     // return juice;
+// }
+
+// logger()
+// const logger = function(){
+//     console.log("hello world");
+// }
+
+
+// function logger(){
+//     console.log("Hello world");
+    
+// } 
+
+// const juiceProcessor = function(orange, apple){
+//     const juice = `I made this juice using ${orange} oranges and ${apple} apples`
+//      return juice; 
+// }
+
+// console.log(juiceProcessor(3, 9));
+
