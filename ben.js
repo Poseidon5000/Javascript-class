@@ -1,6 +1,5 @@
 //Introduction
-
-
+// console.log("Hello World");
 
 // alert("hello world");
 
@@ -379,10 +378,10 @@
 // console.log(juiceMaker(10, 12));
 
 
-function agecalculator(currentYear, dateOfBirth){
-    const yourAge = `You are ${currentYear - dateOfBirth} years old`
-    return yourAge
-}
+// function agecalculator(currentYear, dateOfBirth){
+//     const yourAge = `You are ${currentYear - dateOfBirth} years old`
+//     return yourAge
+// }
 
 // console.log(
 //     agecalculator(2023, 2000)
@@ -412,4 +411,72 @@ function agecalculator(currentYear, dateOfBirth){
 // }
 
 // console.log(juiceProcessor(3, 9));
+
+// Methods are functions called on objects
+
+//slice method
+//spread
+//splice
+//reverse
+//concat
+//join
+//for of
+//for each
+//map
+//filter
+//fill
+//coding challange
+//  const ages = [12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100]
+// console.log(ages.entries());
+
+
+// alert("hello world");
+// console.log("my name is uyai");
+
+// const arr = [2, 4, 6 , 8];
+
+
+// for(i=0; i<arr.length; i++){
+//     console.log(arr[i]);
+// }
+
+// console.log("-----second method-----");
+
+
+// for(arrs of arr){
+//     console.log(arrs);
+// }
+
+// console.log("-----third method-----");
+
+
+// arr.forEach(function(arrs){
+//     console.log(arrs);
+// });
+
+
+//slice method
+//spread
+//splice
+//reverse
+//concat
+//join
+//for of
+//for each
+//map
+//filter
+//fill
+
+//DOM 
+
+//CREATING ELEMENTS USING JAVA SCRIPT
+
+const newElement = document.createElement("h2");
+newElement.classList.add("message");
+newElement.textContent = "Hello universe"
+
+console.log(newElement);
+
+
+
 
