@@ -14,9 +14,12 @@ const header = document.querySelector('.header');
 const nav = document.querySelector('.nav');
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
-const sliderright = document.querySelector('.slider__btn--right');
-const sliderleft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
+const btnLeft = document.querySelector('.slider__btn--left');
 const section1 = document.querySelector('#section--1');
+const dotContainer = document.querySelector(".dots")
+
+console.log(dotContainer);
 
 const openModal = function () {
   modal.classList.remove('hidden');
@@ -160,9 +163,12 @@ const allSections = document.querySelectorAll(".section")
 
 const revealSection = function(ent){
   const ents = ent[0];
-  console.log(ents);
+  // console.log(ents);
+
+  if(!ents.isIntersecting)return
 
   ents.target.classList.remove("section--hidden")
+  observer.unobserve(ent.target)
 }
 
 
@@ -173,7 +179,7 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 
 
 allSections.forEach(function(section){
-  section.classList.add('section--hidden')
+  // section.classList.add('section--hidden')
   sectionObserver.observe(section)
   
 })
@@ -186,12 +192,91 @@ const loadImg = function(ent, obs){
   if(!ents.isIntersecting)return
 
   ents.target.src = ents.target.dataset.src
-  ents.target.classList.remove("lazy-img")
+  ents.target.classList.remove("lazy-img");
+  observer.unobserve(ents.target)
 }
 
 const imgObserver = new IntersectionObserver(loadImg, {
   root:null,
   threshold:0,
+  rootMargin:"200px"
 })
 
 imgTargets.forEach(img => imgObserver.observe(img))
+
+//SMOOTH SCROLLING FOR NAV BAR
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
+//BUILDING CAROUSEL
+let currSlide = 0;
+let maxSlide = slides.length-1;
+
+
+
+
+slides.forEach((slide, index)=> slide.style.transform = `translateX(${100 * index}%)`);
+
+const slideControl = (sli) => {
+  slides.forEach((slide, index)=> slide.style.transform = `translateX(${100 * (index - sli)}%)`)
+}
+
+
+btnRight.addEventListener("click", function(){
+
+  if(currSlide === maxSlide){
+    currSlide = 0
+  }
+  else{
+    currSlide++
+  }
+  slideControl(currSlide)
+  activeDots(currSlide)
+})
+
+btnLeft.addEventListener("click", function(){
+  if(currSlide === 0){
+    currSlide = maxSlide
+  }
+  else{
+    currSlide--;
+  }
+  slideControl(currSlide)
+  activeDots(currSlide)
+})
+
+//DOTS
+const createDots = () => {
+  slides.forEach((_, i)=>{
+    dotContainer.insertAdjacentHTML("beforeend",`<button class ="dots__dot" data-slide= "${i}"><button>` )
+  })
+}
+
+createDots()
+
+const activeDots = function(slide){
+  document.querySelectorAll(".dots__dot").forEach(dot => dot.classList.remove("dots__dot--active"))
+
+  document.querySelector(`.dots__dot[data-slide = "${slide}"]`).classList.add("dots__dot--active")
+  // console.log("hello");
+}
+
+activeDots(0)
+
+dotContainer.addEventListener("click", function(e){
+  if(e.target.classList.contains("dots__dot")){
+    const slide = e.target.dataset.slide
+   
+    
+    slideControl(slide)
+    activeDots(slide)
+  }
+})
+
